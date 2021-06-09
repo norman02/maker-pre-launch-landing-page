@@ -1,0 +1,39 @@
+.header {
+    
+    &--top {
+        display: flex;
+        justify-content: center;
+        margin-top: toRem(40);
+    }
+
+    &--mobile {
+        margin-top: toRem(66.40);
+        display: inline-block;
+        width: 100vw;
+        height: toRem(229.6);
+        background-image: url('../images/illustration-hero-mobile.png');
+        background-size: contain;
+        background-repeat: no-repeat; 
+    }
+
+    &--body {
+        margin-top: toRem(49.26);
+
+        span {
+            color: $primary-color;
+        }
+
+        p {
+            margin-top: toRem(32);
+        }
+
+        .scroll {
+            width: 100vw;
+            height: toRem(42);
+            background-image: url('../../images/icon-scroll.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: toRem(42);
+        }
+    }
+}

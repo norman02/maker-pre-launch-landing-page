@@ -4,12 +4,6 @@
 
 @import 'base/reset';
 @import 'base/typography';
+@import 'base/global';
 
-
-body {
-	background-color: #080C20;
-}
-
-
-
-
+@import 'layouts/header';

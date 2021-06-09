@@ -92,4 +92,41 @@ p {
 body {
   background-color: #080C20;
 }
+
+.header--top {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.header--mobile {
+  margin-top: 4.15rem;
+  display: inline-block;
+  width: 100vw;
+  height: 14.35rem;
+  background-image: url("../images/illustration-hero-mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header--body {
+  margin-top: 3.07875rem;
+}
+
+.header--body span {
+  color: #3EE9E5;
+}
+
+.header--body p {
+  margin-top: 2rem;
+}
+
+.header--body .scroll {
+  width: 100vw;
+  height: 2.625rem;
+  background-image: url("../../images/icon-scroll.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 2.625rem;
+}
 /*# sourceMappingURL=main.css.map */
