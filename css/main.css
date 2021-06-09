@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,5 +56,40 @@ table {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3 {
+  color: #FFFFFF;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  font-weight: 900;
+}
+
+p {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  font-weight: 500;
+  color: #777F98;
+}
+
+body {
+  background-color: #080C20;
 }
 /*# sourceMappingURL=main.css.map */

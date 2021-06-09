@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+body {
+	font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3 {
+	color: $heading-text-color;
+}
+
+h1, h2, h3, p {
+	text-align: center;
+}
+
+h1 {
+	@include text-format(32, 40, 900);
+}
+
+h2 {
+	@include text-format(24, 29, 900);
+}
+
+p {
+	@include text-format(15, 25, 500);
+	color: $primary-text-color;
+}
