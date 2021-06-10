@@ -221,10 +221,31 @@ button:active {
   background-image: url("../images/icon-check.svg");
 }
 
+.header {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-areas: 'A . .' 'B C D';
+  }
+}
+
 .header--top {
   display: flex;
   justify-content: center;
   margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .header--top {
+    position: relative;
+    left: 2.4375rem;
+    margin: 3rem 0 5.15813rem 0;
+    justify-content: left;
+    grid-area: A;
+  }
 }
 
 .header--mobile {
@@ -233,13 +254,54 @@ button:active {
   width: 100vw;
   height: 14.35rem;
   background-image: url("../images/illustration-hero-mobile.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 600px) {
+  .header--mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header--left {
+    display: inline-block;
+    grid-area: B;
+    width: 17.93vw;
+    background-image: url("../images/illustration-hero-left.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header--right {
+    grid-area: D;
+    display: inline-block;
+    width: 17.93vw;
+    background-image: url("../images/illustration-hero-right.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
+
 .header--body {
   margin-top: 3.07875rem;
+}
+
+@media screen and (min-width: 600px) {
+  .header--body {
+    margin-top: 3.14062rem;
+    width: 64.14vw;
+    background-image: url("../images/bg-hero-squiggle.svg");
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 }
 
 .header--body span {
@@ -253,10 +315,22 @@ button:active {
 .header--body .scroll {
   width: 100vw;
   height: 2.625rem;
-  background-image: url("../../images/icon-scroll.svg");
+  background-image: url("../images/icon-scroll.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 2.625rem;
+}
+
+@media screen and (min-width: 600px) {
+  .header--body .scroll {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header--body {
+    grid-area: C;
+  }
 }
 
 footer {
@@ -339,5 +413,13 @@ footer button {
 
 .home--two .price-card {
   margin-bottom: 4.0625rem;
+}
+
+main {
+  display: none;
+}
+
+footer {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

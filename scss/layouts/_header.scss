@@ -1,9 +1,24 @@
 .header {
+
+    overflow: hidden;
+
+    @include media-md {
+        display: grid;
+        grid-template-areas: 'A . .' 'B C D';
+    }
     
     &--top {
         display: flex;
         justify-content: center;
         margin-top: toRem(40);
+
+        @include media-md {
+            position: relative;
+            left: toRem(39);
+            margin: toRem(48) 0 toRem(82.53) 0;
+            justify-content: left;
+            grid-area: A;
+        }
     }
 
     &--mobile {
@@ -12,13 +27,50 @@
         width: 100vw;
         height: toRem(229.6);
         background-image: url('../images/illustration-hero-mobile.png');
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat; 
+
+        @include media-md {
+            display: none;
+        }
+    }
+
+    &--left {
+        @include media-md {
+            display: inline-block;
+            grid-area: B;
+            width: 17.93vw;
+            background-image: url('../images/illustration-hero-left.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    }
+
+    &--right {
+        @include media-md {
+            grid-area: D;
+            display: inline-block;
+            width: 17.93vw;
+            background-image: url('../images/illustration-hero-right.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
     }
 
     &--body {
         margin-top: toRem(49.26);
+
+        @include media-md {
+            margin-top: toRem(50.25);
+            width: 64.14vw;
+            background-image: url('../images/bg-hero-squiggle.svg');
+            background-size: contain;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
 
         span {
             color: $primary-color;
@@ -31,10 +83,18 @@
         .scroll {
             width: 100vw;
             height: toRem(42);
-            background-image: url('../../images/icon-scroll.svg');
+            background-image: url('../images/icon-scroll.svg');
             background-repeat: no-repeat;
             background-position: center;
             margin-top: toRem(42);
+
+            @include media-md {
+                width: auto;
+            }
+        }
+
+        @include media-md {
+            grid-area: C;
         }
     }
 }

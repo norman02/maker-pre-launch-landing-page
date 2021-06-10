@@ -4,3 +4,21 @@
 	font-weight: $font-weight;
 	font-family: 'Manrope', sans-serif;
 }
+
+@mixin media-md {
+	@media screen and (min-width: 600px) {
+		@content;
+	}	
+}
+
+@mixin media-lg {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}	
+}
+
+@mixin media-xl {
+	@media screen and (min-width: 1800px) {
+		@content;
+	}	
+}
