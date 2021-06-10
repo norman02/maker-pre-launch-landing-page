@@ -1,6 +1,12 @@
-$primary-color: #3EE9E5;
+$white: hsla(0, 0%, 100%, 1);
 
-$element-bg-color: #093F68;
+$primary-color: hsla(179, 80%, 58%, 1);
+
+$element-bg-color: hsla(206, 84%, 22%, 1);
 
 $heading-text-color: #FFFFFF;
 $primary-text-color: hsla(225, 14%, 53%, 1);
+
+$very-dark-blue: hsla(230, 60%, 8%, 1);
+
+$lt-elem-text-color: $very-dark-blue;

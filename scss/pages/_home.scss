@@ -1,0 +1,42 @@
+.home {
+    margin: 0 6.4%;
+
+    &--one {
+        margin-top: toRem(144);
+
+        &--card {
+            text-align: center;
+
+            .img-cont {
+                display: inline-flex;
+                width: 120px;
+                height: 124px;
+                background: hsla(206, 84%, 22%, 1) 0% 0% no-repeat padding-box;
+                border-radius: 45px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h2 {
+                @include text-format(18, 22, 900);
+                margin-top: toRem(32);
+            }
+
+            p {
+                margin: toRem(18) 0 toRem(66) 0;
+            }
+        }
+    }
+
+    &--two {
+        margin-top: toRem(154);
+
+        p {
+            margin: toRem(36) 0 toRem(66) 0;
+        }
+
+        .price-card {
+            margin-bottom: toRem(65);
+        }
+    }
+}
