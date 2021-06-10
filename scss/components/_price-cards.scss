@@ -1,0 +1,75 @@
+.price-card {
+    position: relative;
+    background: $element-bg-color 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    padding: toRem(49) toRem(30);
+    text-align: left;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: toRem(-20);
+        display: inline-block;
+        background: url('../images/icon-free.svg');
+        width: toRem(45.62);
+        height: toRem(45.45);
+    }
+
+    h3 {
+        text-align: left;
+        margin-bottom: toRem(26);
+    }
+
+    p {
+        text-align: left;
+        color: hsla(0, 0%, 100%, 1);
+        opacity: 0.60;
+        margin: 0;
+    }
+
+    .price {
+        @include text-format(40, 48, 900);
+        margin-top: toRem(61);
+        margin-bottom: toRem(34);
+        color: white;
+        opacity: 1;
+    }
+
+    li {
+        padding-left: toRem(25);
+        padding-bottom: toRem(5);
+        margin-bottom: toRem(19.3);
+        color: white;
+        background-image: url('../images/icon-check-light.svg');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+
+    &--light {
+        background-color: $primary-color;
+        color: hsla(230, 60%, 8%, 1);
+
+        &::before {
+            background: url('../images/icon-paid.svg');
+            width: toRem(50.18);
+            height: toRem(64.92);
+            top: toRem(-32);
+        }
+
+        h3, p, .price, li {
+            color: $lt-elem-text-color;
+        }
+
+        .price {
+            span {
+              @include text-format(15, 25, 500); 
+              opacity: 0.60; 
+              margin-left: toRem(26.5);
+            }
+        }
+
+        li {
+            background-image: url('../images/icon-check.svg');
+        }
+    }
+}

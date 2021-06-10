@@ -1,0 +1,32 @@
+footer {
+	margin-top: toRem(145);
+	background-image: url('../images/bg-footer-squiggle.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-bottom: toRem(165);
+
+	.container {
+		margin: 0 6.4%;
+	}
+
+	.email{
+		margin-top: toRem(44);
+		width: 100%;
+		padding: toRem(12) 0 toRem(21) 0;
+		align-items: center;
+		background: $element-bg-color 0% 0% no-repeat padding-box;
+		border-radius: 24px;
+		outline: none;
+		border: none;
+
+		&::placeholder {
+			@include text-format(15, 15, 900);
+			color: hsla(0, 0%, 100%, 0.4);
+			text-indent: toRem(18);
+		}
+	}
+
+	button {
+		margin-top: toRem(24)
+	}	
+}
