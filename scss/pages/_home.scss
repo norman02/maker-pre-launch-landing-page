@@ -1,6 +1,8 @@
 .home {
     margin: 0 6.4%;
 
+
+
     &--one {
         margin-top: toRem(144);
 
@@ -8,13 +10,13 @@
             text-align: center;
 
             .img-cont {
-                display: inline-flex;
-                width: 120px;
-                height: 124px;
+                align-items: center;
                 background: hsla(206, 84%, 22%, 1) 0% 0% no-repeat padding-box;
                 border-radius: 45px;
-                align-items: center;
+                display: inline-flex;
                 justify-content: center;
+                height: 124px;
+                width: 120px;  
             }
 
             h2 {
