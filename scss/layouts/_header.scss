@@ -6,6 +6,11 @@
         display: grid;
         grid-template-areas: 'A . .' 'B C D';
     }
+
+    @include media-xl {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
     
     &--top {
         display: flex;
@@ -18,6 +23,15 @@
             margin: toRem(48) 0 toRem(82.53) 0;
             justify-content: left;
             grid-area: A;
+        }
+
+        @include media-lg {
+            margin: toRem(81) 0 toRem(117.77) 0;
+            left: toRem(165);
+        }
+
+        @include media-xl {
+            left: 0;
         }
     }
 
@@ -42,9 +56,17 @@
             grid-area: B;
             width: 17.93vw;
             background-image: url('../images/illustration-hero-left.svg');
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: right;
+        }
+
+        @include media-lg {
+            width: 24.65vw;
+        }
+
+        @include media-xl {
+            width: toRem(300);
         }
     }
 
@@ -54,9 +76,17 @@
             display: inline-block;
             width: 17.93vw;
             background-image: url('../images/illustration-hero-right.svg');
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: left;
+        }
+
+        @include media-lg {
+            width: 24.65vw;
+        }
+
+        @include media-xl {
+            width: toRem(300);
         }
     }
 
@@ -70,6 +100,14 @@
             background-size: contain;
             background-position: center top;
             background-repeat: no-repeat;
+        }
+
+        @include media-lg {
+            width: 50.7vw;
+        }
+
+        @include media-xl {
+            width: toRem(1000);
         }
 
         span {
