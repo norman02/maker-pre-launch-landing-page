@@ -1,59 +1,60 @@
-.price-card {
-    position: relative;
-    background: $element-bg-color 0% 0% no-repeat padding-box;
+.price-card { /* style pricing information */
+    background-color: $element-bg-color;
     border-radius: 8px;
     padding: toRem(49) toRem(30);
+    position: relative;
     text-align: left;
 
-    &::before {
+    &::before { /* add image to top of price card */
+        background-image: url('../images/icon-free.svg');
         content: "";
+        display: inline-block;
+        height: toRem(45.45);
         position: absolute;
         top: toRem(-20);
-        display: inline-block;
-        background: url('../images/icon-free.svg');
-        width: toRem(45.62);
-        height: toRem(45.45);
+        width: toRem(45.62); 
     }
 
     h3 {
-        text-align: left;
         margin-bottom: toRem(26);
+        text-align: left;
+        
     }
 
     p {
         text-align: left;
-        color: hsla(0, 0%, 100%, 1);
+        color: $heading-text-color;
         opacity: 0.60;
         margin: 0;
     }
 
-    .price {
+    .price { /* price appears larger and offset from list */
         @include text-format(40, 48, 900);
-        margin-top: toRem(61);
+        color: $heading-text-color;
         margin-bottom: toRem(34);
-        color: white;
+        margin-top: toRem(61);
         opacity: 1;
     }
 
-    li {
-        padding-left: toRem(25);
-        padding-bottom: toRem(5);
-        margin-bottom: toRem(19.3);
-        color: white;
+    li { /* add checkmark list-style-image doesn't line up correctly */
         background-image: url('../images/icon-check-light.svg');
-        background-repeat: no-repeat;
         background-position: left bottom;
+        background-repeat: no-repeat;
+        color: $heading-text-color;
+        margin-bottom: toRem(19.3);
+        padding-bottom: toRem(5);
+        padding-left: toRem(25);   
     }
 
-    &--light {
+    &--light { /* style lighter color card */
         background-color: $primary-color;
         color: hsla(230, 60%, 8%, 1);
 
-        &::before {
+        &::before { /* add image to top of card */
             background: url('../images/icon-paid.svg');
-            width: toRem(50.18);
             height: toRem(64.92);
             top: toRem(-32);
+            width: toRem(50.18);
         }
 
         h3, p, .price, li {
@@ -68,7 +69,7 @@
             }
         }
 
-        li {
+        li { /* add checkmark list-style-image doesn't line up correctly */
             background-image: url('../images/icon-check.svg');
         }
     }

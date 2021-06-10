@@ -1,20 +1,20 @@
-.home {
+.home { /* style home page */
     margin: 0 6.4%;
 
-    &--one {
+    &--one { /* first section of home page */
         margin-top: toRem(144);
 
-        &--card {
+        &--card { 
             text-align: center;
 
             .img-cont {
-                display: inline-flex;
-                width: 120px;
-                height: 124px;
-                background: hsla(206, 84%, 22%, 1) 0% 0% no-repeat padding-box;
-                border-radius: 45px;
                 align-items: center;
+                background-color: hsla(206, 84%, 22%, 1);
+                border-radius: 45px;
+                display: inline-flex;
                 justify-content: center;
+                height: 124px;
+                width: 120px;  
             }
 
             h2 {
@@ -28,7 +28,7 @@
         }
     }
 
-    &--two {
+    &--two { /* second section of home page */
         margin-top: toRem(154);
 
         p {

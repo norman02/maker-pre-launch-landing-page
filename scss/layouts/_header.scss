@@ -1,24 +1,116 @@
-.header {
+/* Header Styles */
+
+.header {  
+
+    overflow: hidden;
+
+    @include media-md {
+        display: grid;
+        grid-template-areas: 'A . .' 'B C D';
+    }
+
+    @include media-xl {
+        margin: 0 auto;
+        max-width: 1600px;
+    }
     
-    &--top {
+    &--top { /* Style top of header */
         display: flex;
         justify-content: center;
         margin-top: toRem(40);
-    }
 
-    &--mobile {
-        margin-top: toRem(66.40);
-        display: inline-block;
-        width: 100vw;
-        height: toRem(229.6);
+        @include media-md {
+            grid-area: A;
+            justify-content: left;
+            left: toRem(39);
+            margin: toRem(48) 0 toRem(82.53) 0;
+            position: relative;
+        }
+
+        @include media-lg {
+            left: toRem(165);
+            margin: toRem(81) 0 toRem(117.77) 0;
+        }
+
+        @include media-xl {
+            left: 0;
+        }
+    }
+    
+    &--mobile { /* header images for mobile display */
         background-image: url('../images/illustration-hero-mobile.png');
-        background-size: contain;
         background-position: center;
         background-repeat: no-repeat; 
-    }
+        background-size: cover;
+        display: inline-block;
+        height: toRem(229.6);
+        margin-top: toRem(66.40);
+        width: 100vw;
 
-    &--body {
+        @include media-md {
+            display: none;
+        }
+    }
+    
+    &--left { /* Style left section of header on larger screens */
+        @include media-md {
+            display: inline-block;
+            grid-area: B;
+            background-position: right;
+            background-image: url('../images/illustration-hero-left.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 17.93vw;
+        }
+
+        @include media-lg {
+            width: 24.65vw;
+        }
+
+        @include media-xl {
+            width: toRem(300);
+        }
+    }
+    
+    &--right { /* Style right section of header on larger screens */
+        @include media-md {
+            display: inline-block;
+            background-image: url('../images/illustration-hero-right.svg');
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            grid-area: D;
+            width: 17.93vw;
+        }
+
+        @include media-lg {
+            width: 24.65vw;
+        }
+
+        @include media-xl {
+            width: toRem(300);
+        }
+    }
+    
+    &--body { /* style center section of header */
         margin-top: toRem(49.26);
+
+        @include media-md {
+            background-image: url('../images/bg-hero-squiggle.svg');
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: toRem(50.25);
+            width: 64.14vw;
+        }
+
+        @include media-lg {
+            width: 50.7vw;
+        }
+
+        @include media-xl {
+            width: toRem(1000);
+        }
 
         span {
             color: $primary-color;
@@ -27,14 +119,22 @@
         p {
             margin: toRem(32) 6.4%;
         }
-
-        .scroll {
-            width: 100vw;
-            height: toRem(42);
-            background-image: url('../../images/icon-scroll.svg');
-            background-repeat: no-repeat;
+        
+        .scroll { /* mouse icon */
+            background-image: url('../images/icon-scroll.svg');
             background-position: center;
+            background-repeat: no-repeat;
+            height: toRem(42);
             margin-top: toRem(42);
+            width: 100vw;
+
+            @include media-md {
+                width: auto;
+            }
+        }
+
+        @include media-md {
+            grid-area: C;
         }
     }
 }
