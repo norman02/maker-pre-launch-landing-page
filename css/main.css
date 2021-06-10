@@ -264,6 +264,7 @@ footer {
   background-image: url("../images/bg-footer-squiggle.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  padding-bottom: 10.3125rem;
 }
 
 footer .container {
