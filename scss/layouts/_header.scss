@@ -13,8 +13,8 @@
         margin: 0 auto;
         max-width: 1600px;
     }
-    /* Style top of header */
-    &--top { 
+    
+    &--top { /* Style top of header */
         display: flex;
         justify-content: center;
         margin-top: toRem(40);
@@ -36,8 +36,8 @@
             left: 0;
         }
     }
-    /* header images for mobile display */
-    &--mobile { 
+    
+    &--mobile { /* header images for mobile display */
         background-image: url('../images/illustration-hero-mobile.png');
         background-position: center;
         background-repeat: no-repeat; 
@@ -51,8 +51,8 @@
             display: none;
         }
     }
-    /* Style left section of header on larger screens */
-    &--left {
+    
+    &--left { /* Style left section of header on larger screens */
         @include media-md {
             display: inline-block;
             grid-area: B;
@@ -71,8 +71,8 @@
             width: toRem(300);
         }
     }
-    /* Style right section of header on larger screens */
-    &--right {
+    
+    &--right { /* Style right section of header on larger screens */
         @include media-md {
             display: inline-block;
             background-image: url('../images/illustration-hero-right.svg');
@@ -91,8 +91,8 @@
             width: toRem(300);
         }
     }
-    /* style center section of header */
-    &--body {
+    
+    &--body { /* style center section of header */
         margin-top: toRem(49.26);
 
         @include media-md {
@@ -119,8 +119,8 @@
         p {
             margin: toRem(32) 6.4%;
         }
-        /* mouse icon */
-        .scroll {
+        
+        .scroll { /* mouse icon */
             background-image: url('../images/icon-scroll.svg');
             background-position: center;
             background-repeat: no-repeat;

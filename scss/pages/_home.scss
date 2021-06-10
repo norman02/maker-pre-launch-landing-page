@@ -1,17 +1,15 @@
-.home {
+.home { /* style home page */
     margin: 0 6.4%;
 
-
-
-    &--one {
+    &--one { /* first section of home page */
         margin-top: toRem(144);
 
-        &--card {
+        &--card { 
             text-align: center;
 
             .img-cont {
                 align-items: center;
-                background: hsla(206, 84%, 22%, 1) 0% 0% no-repeat padding-box;
+                background-color: hsla(206, 84%, 22%, 1);
                 border-radius: 45px;
                 display: inline-flex;
                 justify-content: center;
@@ -30,7 +28,7 @@
         }
     }
 
-    &--two {
+    &--two { /* second section of home page */
         margin-top: toRem(154);
 
         p {

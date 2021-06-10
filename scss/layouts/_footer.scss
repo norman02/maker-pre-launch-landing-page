@@ -1,23 +1,23 @@
-footer {
-	margin-top: toRem(145);
+footer { /* style page footer */
 	background-image: url('../images/bg-footer-squiggle.svg');
-	background-size: contain;
 	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: toRem(145);
 	padding-bottom: toRem(165);
 
-	.container {
+	.container { /* set margin for mobile devices */
 		margin: 0 6.4%;
 	}
 
-	.email{
-		margin-top: toRem(44);
-		width: 100%;
-		padding: toRem(12) 0 toRem(21) 0;
+	.email{ /* styles for email text input */
 		align-items: center;
-		background: $element-bg-color 0% 0% no-repeat padding-box;
-		border-radius: 24px;
-		outline: none;
+		background-color: $element-bg-color;
 		border: none;
+		border-radius: 24px;
+		margin-top: toRem(44);
+		outline: none;
+		padding: toRem(12) 0 toRem(21) 0;
+		width: 100%;
 
 		&::placeholder {
 			@include text-format(15, 15, 900);

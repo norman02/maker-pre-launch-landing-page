@@ -1,42 +1,16 @@
-button {
-    display: inline-block;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 0;
-    text-decoration: none;
-    background: #0069ed;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
 
-button:hover,
-button:focus {
-    background: #0053ba;
-}
 
-button:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
-}
-
-button:active {
-    transform: scale(0.99);
-}
-
-.btn {
+.btn { /* Style Buttons */
     @include text-format(15, 15, 900);
-    color: hsla(206, 84%, 22%, 1);
-    width: 100%;
-    background: hsla(179, 80%, 58%, 1) 0% 0% no-repeat padding-box;
-    border-radius: 24px;
-    padding: 0;
+    background: hsla(179, 80%, 58%, 1);
     border: none;
+    border-radius: 24px;
+    color: hsla(206, 84%, 22%, 1);
+    padding: 0;
     padding: toRem(12) 0 toRem(21) 0;
+    width: 100%;
+    
+    &:active {
+        transform: scale(0.98);
+    }
 }

@@ -1,12 +1,21 @@
+//Colors
+$aqua: hsla(179, 80%, 58%, 1);
+$dark-blue: hsla(206, 84%, 22%, 1);
+$grey-blue: hsla(225, 14%, 53%, 1); 
+$very-dark-blue: hsla(230, 60%, 8%, 1);
 $white: hsla(0, 0%, 100%, 1);
 
-$primary-color: hsla(179, 80%, 58%, 1);
+//primary colors
+$primary-color: $aqua;
 
-$element-bg-color: hsla(206, 84%, 22%, 1);
+//background colors
+$body-bg-color: $very-dark-blue;
+$element-bg-color: $dark-blue;
 
-$heading-text-color: #FFFFFF;
-$primary-text-color: hsla(225, 14%, 53%, 1);
-
-$very-dark-blue: hsla(230, 60%, 8%, 1);
-
+//text colors
+$heading-text-color: $white;
 $lt-elem-text-color: $very-dark-blue;
+$primary-text-color: $grey-blue;
+
+
+

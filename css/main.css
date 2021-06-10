@@ -62,11 +62,16 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
-h1, h2, h3 {
-  color: #FFFFFF;
+h1,
+h2,
+h3 {
+  color: white;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   text-align: center;
 }
 
@@ -93,75 +98,51 @@ p {
 }
 
 body {
-  background-color: #080C20;
-}
-
-button {
-  display: inline-block;
-  border: none;
-  padding: 1rem 2rem;
-  margin: 0;
-  text-decoration: none;
-  background: #0069ed;
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out,  transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-button:hover,
-button:focus {
-  background: #0053ba;
-}
-
-button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-}
-
-button:active {
-  transform: scale(0.99);
+  background-color: #080c21;
 }
 
 .btn {
+  /* Style Buttons */
   font-size: 0.9375rem;
   line-height: 0.9375rem;
   font-weight: 900;
   font-family: 'Manrope', sans-serif;
-  color: #093e67;
-  width: 100%;
-  background: #3eeae7 0% 0% no-repeat padding-box;
-  border-radius: 24px;
-  padding: 0;
+  background: #3eeae7;
   border: none;
+  border-radius: 24px;
+  color: #093e67;
+  padding: 0;
   padding: 0.75rem 0 1.3125rem 0;
+  width: 100%;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .price-card {
-  position: relative;
-  background: #093e67 0% 0% no-repeat padding-box;
+  /* style pricing information */
+  background-color: #093e67;
   border-radius: 8px;
   padding: 3.0625rem 1.875rem;
+  position: relative;
   text-align: left;
 }
 
 .price-card::before {
+  /* add image to top of price card */
+  background-image: url("../images/icon-free.svg");
   content: "";
+  display: inline-block;
+  height: 2.84063rem;
   position: absolute;
   top: -1.25rem;
-  display: inline-block;
-  background: url("../images/icon-free.svg");
   width: 2.85125rem;
-  height: 2.84063rem;
 }
 
 .price-card h3 {
-  text-align: left;
   margin-bottom: 1.625rem;
+  text-align: left;
 }
 
 .price-card p {
@@ -172,36 +153,40 @@ button:active {
 }
 
 .price-card .price {
+  /* price appears larger and offset from list */
   font-size: 2.5rem;
   line-height: 3rem;
   font-weight: 900;
   font-family: 'Manrope', sans-serif;
-  margin-top: 3.8125rem;
-  margin-bottom: 2.125rem;
   color: white;
+  margin-bottom: 2.125rem;
+  margin-top: 3.8125rem;
   opacity: 1;
 }
 
 .price-card li {
-  padding-left: 1.5625rem;
-  padding-bottom: 0.3125rem;
-  margin-bottom: 1.20625rem;
-  color: white;
+  /* add checkmark list-style-image doesn't line up correctly */
   background-image: url("../images/icon-check-light.svg");
-  background-repeat: no-repeat;
   background-position: left bottom;
+  background-repeat: no-repeat;
+  color: white;
+  margin-bottom: 1.20625rem;
+  padding-bottom: 0.3125rem;
+  padding-left: 1.5625rem;
 }
 
 .price-card--light {
+  /* style lighter color card */
   background-color: #3eeae7;
   color: #080c21;
 }
 
 .price-card--light::before {
+  /* add image to top of card */
   background: url("../images/icon-paid.svg");
-  width: 3.13625rem;
   height: 4.0575rem;
   top: -2rem;
+  width: 3.13625rem;
 }
 
 .price-card--light h3, .price-card--light p, .price-card--light .price, .price-card--light li {
@@ -218,9 +203,11 @@ button:active {
 }
 
 .price-card--light li {
+  /* add checkmark list-style-image doesn't line up correctly */
   background-image: url("../images/icon-check.svg");
 }
 
+/* Header Styles */
 .header {
   overflow: hidden;
 }
@@ -232,7 +219,15 @@ button:active {
   }
 }
 
+@media screen and (min-width: 1800px) {
+  .header {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+}
+
 .header--top {
+  /* Style top of header */
   display: flex;
   justify-content: center;
   margin-top: 2.5rem;
@@ -240,23 +235,37 @@ button:active {
 
 @media screen and (min-width: 600px) {
   .header--top {
-    position: relative;
+    grid-area: A;
+    justify-content: left;
     left: 2.4375rem;
     margin: 3rem 0 5.15813rem 0;
-    justify-content: left;
-    grid-area: A;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header--top {
+    left: 10.3125rem;
+    margin: 5.0625rem 0 7.36062rem 0;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .header--top {
+    left: 0;
   }
 }
 
 .header--mobile {
-  margin-top: 4.15rem;
-  display: inline-block;
-  width: 100vw;
-  height: 14.35rem;
+  /* header images for mobile display */
   background-image: url("../images/illustration-hero-mobile.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 14.35rem;
+  margin-top: 4.15rem;
+  width: 100vw;
 }
 
 @media screen and (min-width: 600px) {
@@ -265,42 +274,87 @@ button:active {
   }
 }
 
+.header--left {
+  /* Style left section of header on larger screens */
+}
+
 @media screen and (min-width: 600px) {
   .header--left {
     display: inline-block;
     grid-area: B;
-    width: 17.93vw;
-    background-image: url("../images/illustration-hero-left.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: right;
+    background-image: url("../images/illustration-hero-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 17.93vw;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .header--left {
+    width: 24.65vw;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .header--left {
+    width: 18.75rem;
+  }
+}
+
+.header--right {
+  /* Style right section of header on larger screens */
 }
 
 @media screen and (min-width: 600px) {
   .header--right {
-    grid-area: D;
     display: inline-block;
-    width: 17.93vw;
     background-image: url("../images/illustration-hero-right.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-area: D;
+    width: 17.93vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header--right {
+    width: 24.65vw;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .header--right {
+    width: 18.75rem;
   }
 }
 
 .header--body {
+  /* style center section of header */
   margin-top: 3.07875rem;
 }
 
 @media screen and (min-width: 600px) {
   .header--body {
-    margin-top: 3.14062rem;
-    width: 64.14vw;
     background-image: url("../images/bg-hero-squiggle.svg");
-    background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 3.14062rem;
+    width: 64.14vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header--body {
+    width: 50.7vw;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .header--body {
+    width: 62.5rem;
   }
 }
 
@@ -313,12 +367,13 @@ button:active {
 }
 
 .header--body .scroll {
-  width: 100vw;
-  height: 2.625rem;
+  /* mouse icon */
   background-image: url("../images/icon-scroll.svg");
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 2.625rem;
   margin-top: 2.625rem;
+  width: 100vw;
 }
 
 @media screen and (min-width: 600px) {
@@ -334,26 +389,29 @@ button:active {
 }
 
 footer {
-  margin-top: 9.0625rem;
+  /* style page footer */
   background-image: url("../images/bg-footer-squiggle.svg");
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 9.0625rem;
   padding-bottom: 10.3125rem;
 }
 
 footer .container {
+  /* set margin for mobile devices */
   margin: 0 6.4%;
 }
 
 footer .email {
-  margin-top: 2.75rem;
-  width: 100%;
-  padding: 0.75rem 0 1.3125rem 0;
+  /* styles for email text input */
   align-items: center;
-  background: #093e67 0% 0% no-repeat padding-box;
-  border-radius: 24px;
-  outline: none;
+  background-color: #093e67;
   border: none;
+  border-radius: 24px;
+  margin-top: 2.75rem;
+  outline: none;
+  padding: 0.75rem 0 1.3125rem 0;
+  width: 100%;
 }
 
 footer .email::placeholder {
@@ -370,10 +428,12 @@ footer button {
 }
 
 .home {
+  /* style home page */
   margin: 0 6.4%;
 }
 
 .home--one {
+  /* first section of home page */
   margin-top: 9rem;
 }
 
@@ -382,13 +442,13 @@ footer button {
 }
 
 .home--one--card .img-cont {
-  display: inline-flex;
-  width: 120px;
-  height: 124px;
-  background: #093e67 0% 0% no-repeat padding-box;
-  border-radius: 45px;
   align-items: center;
+  background-color: #093e67;
+  border-radius: 45px;
+  display: inline-flex;
   justify-content: center;
+  height: 124px;
+  width: 120px;
 }
 
 .home--one--card h2 {
@@ -404,6 +464,7 @@ footer button {
 }
 
 .home--two {
+  /* second section of home page */
   margin-top: 9.625rem;
 }
 
@@ -413,13 +474,5 @@ footer button {
 
 .home--two .price-card {
   margin-bottom: 4.0625rem;
-}
-
-main {
-  display: none;
-}
-
-footer {
-  display: none;
 }
 /*# sourceMappingURL=main.css.map */
