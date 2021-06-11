@@ -1,11 +1,87 @@
 .home { /* style home page */
     margin: 0 6.4%;
 
-    &--one { /* first section of home page */
+    @include media-md {
+        margin: 0 auto;
+        max-width: toRem(573);
+    }
+
+    @include media-lg {
+        max-width: toRem(1110);
+    }
+
+    &--one { /* apeal section */
         margin-top: toRem(144);
 
-        &--card { 
+        @include media-md {
+            margin-top: toRem(110.65);
+        }
+
+        @include media-lg {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: toRem(203.35);
+        }
+
+        &--card { /* appeal section card */
             text-align: center;
+
+            @include media-md {
+                align-items: center;
+                column-gap: toRem(55);
+                display: grid;
+                grid-template-columns: 120px auto;
+                grid-template-rows: repeat(2, auto);
+                margin-bottom: toRem(40);
+                row-gap: 0;
+            }
+
+            @include media-lg {
+                grid-template-columns: toRem(255);
+                grid-template-rows: repeat(3, auto);
+            }
+
+            &--one { /* appeal card */
+                @include media-md {
+                    margin-left: toRem(165);
+                }
+
+                @include media-lg {
+                    margin-left: 0;
+                }
+            }
+
+            &--two { /* appeal card */
+                @include media-md {
+                    margin-left: toRem(97);
+                }
+
+                @include media-lg {
+                    margin-left: 0;
+                    margin-top: toRem(48);
+                }
+            }
+
+            &--three { /* appeal card */
+                @include media-md {
+                    margin-left: toRem(167);
+                }
+
+                @include media-lg {
+                    margin-left: 0;
+                }
+            }
+
+            &--four { /* appeal card */
+                @include media-md {
+                    margin-left: toRem(97);
+                }
+
+                @include media-lg {
+                    margin-left: 0;
+                    margin-top: toRem(48);
+                }
+            }
 
             .img-cont {
                 align-items: center;
@@ -15,15 +91,51 @@
                 justify-content: center;
                 height: 124px;
                 width: 120px;  
+
+                @include media-md {
+                    grid-column: 1;
+                    grid-row: 1 / 4;
+                }
+
+                @include media-lg {
+                    grid-row: 1;
+                }
             }
 
             h2 {
                 @include text-format(18, 22, 900);
                 margin-top: toRem(32);
+
+                @include media-md {
+                    grid-column: 2;
+                    grid-row: 1;
+                    margin-top: toRem(19);
+                    text-align: left;
+                }
+
+                @include media-lg {
+                    grid-column: 1;
+                    grid-row: 2;
+                    margin-top: toRem(48);
+                }
             }
 
             p {
                 margin: toRem(18) 0 toRem(66) 0;
+
+                @include media-md {
+                    grid-column: 2;
+                    grid-row: 2;
+                    margin: 0;
+                    margin-top: toRem(18);
+                    text-align: left;
+                }
+
+                @include media-lg {
+                    grid-column: 1;
+                    grid-row: 3;
+                    margin-top: toRem(30);
+                }
             }
         }
     }

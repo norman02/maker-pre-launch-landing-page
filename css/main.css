@@ -82,11 +82,29 @@ h1 {
   font-family: 'Manrope', sans-serif;
 }
 
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 900;
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
 h2 {
   font-size: 1.5rem;
   line-height: 1.8125rem;
   font-weight: 900;
   font-family: 'Manrope', sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+    line-height: 2.375rem;
+    font-weight: 900;
+    font-family: 'Manrope', sans-serif;
+  }
 }
 
 p {
@@ -114,6 +132,12 @@ body {
   padding: 0;
   padding: 0.75rem 0 1.3125rem 0;
   width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .btn {
+    width: 8.75rem;
+  }
 }
 
 .btn:active {
@@ -398,13 +422,27 @@ footer {
 }
 
 footer .container {
-  /* set margin for mobile devices */
   margin: 0 6.4%;
+  /* set margin for mobile devices */
+}
+
+@media screen and (min-width: 600px) {
+  footer .cta {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.375rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer .cta {
+    margin-top: 3.375rem;
+  }
 }
 
 footer .email {
   /* styles for email text input */
-  align-items: center;
   background-color: #093e67;
   border: none;
   border-radius: 24px;
@@ -412,6 +450,14 @@ footer .email {
   outline: none;
   padding: 0.75rem 0 1.3125rem 0;
   width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  footer .email {
+    margin: 0;
+    margin-right: 1rem;
+    width: 20rem;
+  }
 }
 
 footer .email::placeholder {
@@ -427,18 +473,137 @@ footer button {
   margin-top: 1.5rem;
 }
 
+@media screen and (min-width: 600px) {
+  footer button {
+    margin: 0;
+  }
+}
+
 .home {
   /* style home page */
   margin: 0 6.4%;
 }
 
+@media screen and (min-width: 600px) {
+  .home {
+    margin: 0 auto;
+    max-width: 35.8125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home {
+    max-width: 69.375rem;
+  }
+}
+
 .home--one {
-  /* first section of home page */
+  /* apeal section */
   margin-top: 9rem;
 }
 
+@media screen and (min-width: 600px) {
+  .home--one {
+    margin-top: 6.91563rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12.70937rem;
+  }
+}
+
 .home--one--card {
+  /* appeal section card */
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .home--one--card {
+    align-items: center;
+    column-gap: 3.4375rem;
+    display: grid;
+    grid-template-columns: 120px auto;
+    grid-template-rows: repeat(2, auto);
+    margin-bottom: 2.5rem;
+    row-gap: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card {
+    grid-template-columns: 15.9375rem;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.home--one--card--one {
+  /* appeal card */
+}
+
+@media screen and (min-width: 600px) {
+  .home--one--card--one {
+    margin-left: 10.3125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card--one {
+    margin-left: 0;
+  }
+}
+
+.home--one--card--two {
+  /* appeal card */
+}
+
+@media screen and (min-width: 600px) {
+  .home--one--card--two {
+    margin-left: 6.0625rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card--two {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+}
+
+.home--one--card--three {
+  /* appeal card */
+}
+
+@media screen and (min-width: 600px) {
+  .home--one--card--three {
+    margin-left: 10.4375rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card--three {
+    margin-left: 0;
+  }
+}
+
+.home--one--card--four {
+  /* appeal card */
+}
+
+@media screen and (min-width: 600px) {
+  .home--one--card--four {
+    margin-left: 6.0625rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card--four {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
 }
 
 .home--one--card .img-cont {
@@ -451,6 +616,19 @@ footer button {
   width: 120px;
 }
 
+@media screen and (min-width: 600px) {
+  .home--one--card .img-cont {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card .img-cont {
+    grid-row: 1;
+  }
+}
+
 .home--one--card h2 {
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -459,8 +637,43 @@ footer button {
   margin-top: 2rem;
 }
 
+@media screen and (min-width: 600px) {
+  .home--one--card h2 {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 1.1875rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card h2 {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 3rem;
+  }
+}
+
 .home--one--card p {
   margin: 1.125rem 0 4.125rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .home--one--card p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    margin-top: 1.125rem;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--one--card p {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 1.875rem;
+  }
 }
 
 .home--two {

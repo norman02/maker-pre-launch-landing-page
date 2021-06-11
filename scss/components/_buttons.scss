@@ -9,6 +9,10 @@
     padding: 0;
     padding: toRem(12) 0 toRem(21) 0;
     width: 100%;
+
+    @include media-md {
+        width: toRem(140);
+    }
     
     &:active {
         transform: scale(0.98);
