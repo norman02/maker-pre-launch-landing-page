@@ -153,6 +153,12 @@ body {
   text-align: left;
 }
 
+@media screen and (min-width: 600px) {
+  .price-card {
+    width: 27.8125rem;
+  }
+}
+
 .price-card::before {
   /* add image to top of price card */
   background-image: url("../images/icon-free.svg");
@@ -487,13 +493,6 @@ footer button {
 @media screen and (min-width: 600px) {
   .home {
     margin: 0 auto;
-    max-width: 35.8125rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .home {
-    max-width: 69.375rem;
   }
 }
 
@@ -504,7 +503,9 @@ footer button {
 
 @media screen and (min-width: 600px) {
   .home--one {
+    margin: 0 auto;
     margin-top: 6.91563rem;
+    max-width: 35.8125rem;
   }
 }
 
@@ -513,6 +514,7 @@ footer button {
     display: flex;
     justify-content: space-evenly;
     margin-top: 12.70937rem;
+    max-width: 69.375rem;
   }
 }
 
@@ -677,15 +679,53 @@ footer button {
 }
 
 .home--two {
-  /* second section of home page */
+  /* pricing section */
   margin-top: 9.625rem;
+}
+
+@media screen and (min-width: 600px) {
+  .home--two {
+    margin: 8.8125rem auto 0 auto;
+    max-width: 35.8125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--two h2 {
+    grid-area: price1;
+  }
 }
 
 .home--two p {
   margin: 2.25rem 0 4.125rem 0;
 }
 
+@media screen and (min-width: 600px) {
+  .home--two p {
+    margin-bottom: 5.5625rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--two p {
+    grid-area: price2;
+  }
+}
+
+.home--two .price-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 1.875rem;
+}
+
 .home--two .price-card {
   margin-bottom: 4.0625rem;
+}
+
+@media screen and (min-width: 600px) {
+  .home--two .price-card {
+    margin: 0 auto 4.0625rem auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

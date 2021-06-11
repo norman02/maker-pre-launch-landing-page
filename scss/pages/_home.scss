@@ -3,24 +3,23 @@
 
     @include media-md {
         margin: 0 auto;
-        max-width: toRem(573);
-    }
-
-    @include media-lg {
-        max-width: toRem(1110);
+        
     }
 
     &--one { /* apeal section */
         margin-top: toRem(144);
 
         @include media-md {
+            margin: 0 auto;
             margin-top: toRem(110.65);
+            max-width: toRem(573);
         }
 
         @include media-lg {
             display: flex;
             justify-content: space-evenly;
             margin-top: toRem(203.35);
+            max-width: toRem(1110);
         }
 
         &--card { /* appeal section card */
@@ -140,15 +139,45 @@
         }
     }
 
-    &--two { /* second section of home page */
+    &--two { /* pricing section */
         margin-top: toRem(154);
+
+        @include media-md {
+            margin: toRem(141) auto 0 auto;
+            max-width: toRem(573);
+        }
+
+        h2 {
+            @include media-lg {
+                grid-area: price1;
+            }
+        }
 
         p {
             margin: toRem(36) 0 toRem(66) 0;
+
+            @include media-md {
+                margin-bottom: toRem(89);
+            }
+            
+            @include media-lg {
+                grid-area: price2;
+            }
+        }
+
+        .price-cards {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            column-gap: toRem(30);
         }
 
         .price-card {
             margin-bottom: toRem(65);
+
+            @include media-md {
+                margin: 0 auto toRem(65) auto;
+            }
         }
     }
 }
