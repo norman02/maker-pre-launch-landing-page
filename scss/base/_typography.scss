@@ -19,10 +19,18 @@ p {
 
 h1 {
 	@include text-format(32, 40, 900);
+
+	@include media-lg {
+		@include text-format(48, 56, 900);
+	}
 }
 
 h2 {
 	@include text-format(24, 29, 900);
+
+	@include media-lg {
+		@include text-format(32, 38, 900);
+	}
 }
 
 p {
