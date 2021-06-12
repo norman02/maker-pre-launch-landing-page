@@ -1,0 +1,49 @@
+
+
+.notice {
+        display: none;
+}
+
+
+
+.email{ /* styles for email text input */
+    @include text-format(15, 15, 900);
+    background-color: $element-bg-color;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    margin-top: toRem(44);
+    overflow: auto;
+    padding: toRem(12) 0 toRem(21) 0;
+    resize: none;
+    text-indent: toRem(18);
+    width: 100%;
+
+    @include media-md {
+        margin: 0;
+        margin-right: toRem(16);
+        width: toRem(320);
+        
+    } 
+
+    &::placeholder {
+        
+        color: hsla(0, 0%, 100%, 0.4);
+        text-indent: toRem(18);
+    }
+}
+
+.error {
+
+    .email {
+        border: 2px solid $red;
+    }
+
+    .notice {
+        @include text-format(122px, 25, 500);
+        color: $red;
+        display: block;
+        position: absolute;
+    }
+    
+}
