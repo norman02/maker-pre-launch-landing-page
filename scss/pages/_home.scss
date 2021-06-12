@@ -166,10 +166,14 @@
         }
 
         .price-cards {
-            display: grid;
-            grid-template-columns: auto auto;
-            justify-content: center;
-            column-gap: toRem(30);
+
+            @include media-lg {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: center;
+                column-gap: toRem(30);
+            }
+            
         }
 
         .price-card {

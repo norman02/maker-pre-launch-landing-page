@@ -712,11 +712,13 @@ footer button {
   }
 }
 
-.home--two .price-cards {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
-  column-gap: 1.875rem;
+@media screen and (min-width: 1200px) {
+  .home--two .price-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 1.875rem;
+  }
 }
 
 .home--two .price-card {
