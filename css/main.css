@@ -144,6 +144,62 @@ body {
   transform: scale(0.98);
 }
 
+.btn:hover {
+  color: white;
+  border: 2px solid #3eeae7;
+  background-color: #080c21;
+  transition: 0.8s;
+}
+
+.notice {
+  display: none;
+}
+
+.email {
+  /* styles for email text input */
+  font-size: 0.9375rem;
+  line-height: 0.9375rem;
+  font-weight: 900;
+  font-family: 'Manrope', sans-serif;
+  background-color: #093e67;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  margin-top: 2.75rem;
+  overflow: auto;
+  padding: 0.75rem 0 1.3125rem 0;
+  resize: none;
+  text-indent: 1.125rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .email {
+    margin: 0;
+    margin-right: 1rem;
+    width: 20rem;
+  }
+}
+
+.email::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  text-indent: 1.125rem;
+}
+
+.error .email {
+  border: 2px solid #ff2965;
+}
+
+.error .notice {
+  font-size: 7.625pxrem;
+  line-height: 1.5625rem;
+  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+  color: #ff2965;
+  display: block;
+  position: absolute;
+}
+
 .price-card {
   /* style pricing information */
   background-color: #093e67;
@@ -151,6 +207,12 @@ body {
   padding: 3.0625rem 1.875rem;
   position: relative;
   text-align: left;
+}
+
+@media screen and (min-width: 600px) {
+  .price-card {
+    width: 27.8125rem;
+  }
 }
 
 .price-card::before {
@@ -441,34 +503,6 @@ footer .container {
   }
 }
 
-footer .email {
-  /* styles for email text input */
-  background-color: #093e67;
-  border: none;
-  border-radius: 24px;
-  margin-top: 2.75rem;
-  outline: none;
-  padding: 0.75rem 0 1.3125rem 0;
-  width: 100%;
-}
-
-@media screen and (min-width: 600px) {
-  footer .email {
-    margin: 0;
-    margin-right: 1rem;
-    width: 20rem;
-  }
-}
-
-footer .email::placeholder {
-  font-size: 0.9375rem;
-  line-height: 0.9375rem;
-  font-weight: 900;
-  font-family: 'Manrope', sans-serif;
-  color: rgba(255, 255, 255, 0.4);
-  text-indent: 1.125rem;
-}
-
 footer button {
   margin-top: 1.5rem;
 }
@@ -487,13 +521,6 @@ footer button {
 @media screen and (min-width: 600px) {
   .home {
     margin: 0 auto;
-    max-width: 35.8125rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .home {
-    max-width: 69.375rem;
   }
 }
 
@@ -504,7 +531,9 @@ footer button {
 
 @media screen and (min-width: 600px) {
   .home--one {
+    margin: 0 auto;
     margin-top: 6.91563rem;
+    max-width: 35.8125rem;
   }
 }
 
@@ -513,6 +542,7 @@ footer button {
     display: flex;
     justify-content: space-evenly;
     margin-top: 12.70937rem;
+    max-width: 69.375rem;
   }
 }
 
@@ -677,15 +707,55 @@ footer button {
 }
 
 .home--two {
-  /* second section of home page */
+  /* pricing section */
   margin-top: 9.625rem;
+}
+
+@media screen and (min-width: 600px) {
+  .home--two {
+    margin: 8.8125rem auto 0 auto;
+    max-width: 35.8125rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--two h2 {
+    grid-area: price1;
+  }
 }
 
 .home--two p {
   margin: 2.25rem 0 4.125rem 0;
 }
 
+@media screen and (min-width: 600px) {
+  .home--two p {
+    margin-bottom: 5.5625rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--two p {
+    grid-area: price2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--two .price-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    column-gap: 1.875rem;
+  }
+}
+
 .home--two .price-card {
   margin-bottom: 4.0625rem;
+}
+
+@media screen and (min-width: 600px) {
+  .home--two .price-card {
+    margin: 0 auto 4.0625rem auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

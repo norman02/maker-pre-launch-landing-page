@@ -5,6 +5,10 @@
     position: relative;
     text-align: left;
 
+    @include media-md {
+        width: toRem(445);
+    }
+
     &::before { /* add image to top of price card */
         background-image: url('../images/icon-free.svg');
         content: "";

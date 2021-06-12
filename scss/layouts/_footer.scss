@@ -10,6 +10,7 @@ footer { /* style page footer */
 	}
 
 	.cta {
+
 		@include media-md {
 			align-items: center;
 			display: flex;
@@ -22,28 +23,7 @@ footer { /* style page footer */
 		}
 	}
 
-	.email{ /* styles for email text input */
-		background-color: $element-bg-color;
-		border: none;
-		border-radius: 24px;
-		margin-top: toRem(44);
-		outline: none;
-		padding: toRem(12) 0 toRem(21) 0;
-		width: 100%;
 
-		@include media-md {
-			margin: 0;
-			margin-right: toRem(16);
-			width: toRem(320);
-			
-		}
-
-		&::placeholder {
-			@include text-format(15, 15, 900);
-			color: hsla(0, 0%, 100%, 0.4);
-			text-indent: toRem(18);
-		}
-	}
 
 	button {
 		margin-top: toRem(24);
