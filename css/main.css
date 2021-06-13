@@ -151,6 +151,11 @@ body {
   transition: 0.8s;
 }
 
+.btn:focus {
+  outline: none;
+  border: 2px solid white;
+}
+
 .notice {
   display: none;
 }
@@ -184,6 +189,11 @@ body {
 .email::placeholder {
   color: rgba(255, 255, 255, 0.4);
   text-indent: 1.125rem;
+}
+
+.email:focus {
+  border: 2px solid #3eeae7;
+  outline: none;
 }
 
 .error .email {
