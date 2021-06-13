@@ -14,6 +14,7 @@ This is a solution to the [Maker pre-launch landing page challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgements](#Acknowledgements)
 
 ## Overview
 
@@ -82,3 +83,6 @@ I would like to continue working on more complex layouts using CSS grid
 - Frontend Mentor - [@norman02](https://www.frontendmentor.io/profile/norman02)
 - Twitter - [@JohnIsNorman](https://www.twitter.com/JohnIsNorman)
 
+## Acknowledgements
+
+- [Patrick](https://www.frontendmentor.io/profile/palgramming) Thank you for pointing out the bug I had in my transitions.
